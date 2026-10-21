@@ -33,8 +33,8 @@ layout: default
 <p><strong>Read the limitation with the finding.</strong> This is a descriptive analysis of a fan-maintained table. Its annual figures still require independent auditing. The source uses a broad assist definition, the players have different career windows, and per-appearance rates do not adjust for minutes or competition strength. A ranking depends on these choices.</p>
 </div>
 <p><strong>Data and permissions:</strong> <a href="https://messixronaldo.com/calendar-year-stats">source table</a> · <a href="https://messixronaldo.com/methodology">source methodology</a>. No explicit open-data license was found on the inspected pages. Raw source data and website assets are not redistributed; the repository documents this restriction and retrieves the public table when run.</p>
-<p><a class="button" href="https://github.com/LISIWEI-UM/data-science-project">Explore the code &amp; reproduction steps ↗</a>
-</div></p>
+<p><a class="button" href="https://github.com/LISIWEI-UM/data-science-project">Explore the code &amp; reproduction steps ↗</a></p>
+</div>
 <h2>What I will improve next</h2>
 <p>Audit annual observations against independent match records, establish data reuse permissions, compare a common career window, and incorporate a classmate's actual feedback into a documented revision.</p>
 <h2>About this work</h2>
