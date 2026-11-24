@@ -1,0 +1,30 @@
+---
+layout: default
+title: "Messi vs Ronaldo"
+description: "How does the comparison change when an assist counts as much as a goal?"
+permalink: /projects/football/
+---
+<article class="study">
+  <header>
+    <p class="context">Practice 07 &amp; 09 / Ongoing source validation</p>
+    <h1>Messi vs Ronaldo</h1>
+    <p class="dek">How does the comparison change when an assist counts as much as a goal?</p>
+    <a class="action" href="https://github.com/LISIWEI-UM/data-science-project">Open the analysis repository</a>
+  </header>
+  <section>
+    <h2>Two ways to count a contribution</h2>
+    <p>Ronaldo scored 935 goals to Messi’s 855 in the source table. Messi recorded 452 assists to Ronaldo’s 303. Adding goals and assists gives Messi 1,307 contributions and Ronaldo 1,238 across their available calendar years from 2002 to 2025.</p>
+    <figure><a href="{{ '/assets/metric_comparison.png' | relative_url }}" aria-label="Open the full-size figure: Goals, assists and combined contributions for Messi and Ronaldo"><img src="{{ '/assets/metric_comparison.png' | relative_url }}" alt="Goals, assists and combined contributions for Messi and Ronaldo"></a><figcaption>The scoring lead of 80 goals goes to Ronaldo. The lead of 69 combined contributions goes to Messi. Each assist carries the same weight as a goal in the second comparison.</figcaption></figure>
+    <h2>A peak or a run of high-scoring years?</h2>
+    <p>Messi reached 91 goals in 2012. Ronaldo’s highest year was 2013, with 69. Using 40 goals as a threshold tells a different story about sustained scoring. Ronaldo reached it in 15 years and Messi in 11.</p>
+    <figure><a href="{{ '/assets/annual_goals.png' | relative_url }}" aria-label="Open the full-size figure: Annual goals for both players from 2002 to 2025"><img src="{{ '/assets/annual_goals.png' | relative_url }}" alt="Annual goals for both players from 2002 to 2025"></a><figcaption>Each point represents one calendar year. The line for Messi begins with his first available observation.</figcaption></figure>
+  </section>
+  <section>
+    <h2>Source and scope</h2>
+    <p>I extended my Practice 07 visualization into a Python workflow that checks years, missing values and a hash of the source observations before aggregating them. The latest run used the fan-maintained table retrieved on 25 November 2026. Four years of records had changed since October. Both snapshots give the same ordering. <a href="https://github.com/LISIWEI-UM/data-science-project#why-the-october-post-gives-different-totals">Snapshot comparison</a></p>
+    <p>The source uses a broad definition of an assist. Career lengths, minutes played and competition mix also affect the totals. The next check is to audit annual counts against independent match records and compare a common playing window.</p>
+    <p>The script reads the public table on demand. The repository shares the code and derived figures. The source pages inspected did not specify an open-data licence. <a href="https://messixronaldo.com/calendar-year-stats">Source table</a> · <a href="https://messixronaldo.com/methodology">Source methodology</a></p>
+    <h2>Peer feedback on metric coverage</h2>
+    <p>In October a classmate asked where dribbling and penalties fit in this comparison. I added an explicit scope note. Dribbling is outside the dataset, and the goal totals combine penalties with goals from other situations. <a href="https://github.com/LISIWEI-UM/data-science-project/blob/main/PEER_REVIEW.md">Feedback record</a> · <a href="https://github.com/LISIWEI-UM/data-science-project/commit/9f4ac0b3d1672b9e8b12fb8e913a55603e6a7b85">Revision</a></p>
+  </section>
+</article>

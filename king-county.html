@@ -1,0 +1,28 @@
+---
+layout: default
+title: "King County house prices"
+description: "How much does living area tell us about a sale price, and what do other property features add?"
+permalink: /projects/king-county/
+---
+<article class="study">
+  <header>
+    <p class="context">Assignment 01 / Completed</p>
+    <h1>King County house prices</h1>
+    <p class="dek">How much does living area tell us about a sale price, and what do other property features add?</p>
+    <a class="action" href="https://github.com/LISIWEI-UM/CISC7204-mc63848-2026GitHub/tree/main/cisc7204-Assgn01-2026-mc63848/king-county">Open the code and results</a>
+  </header>
+  <section>
+    <h2>Size explains part of the spread</h2>
+    <p>I grouped 21,613 sales by living area. The smallest tenth had a median sale price of $290,000 at a median area of 940 square feet. In the largest tenth, those figures were $948,000 and 3,760 square feet. Even within the largest group the middle half of prices ranged from $750,000 to $1,365,000.</p>
+    <figure><a href="{{ '/assets/price-by-living-area.png' | relative_url }}" aria-label="Open the full-size figure: Median sale prices rise across ten living-area groups, with a wider price range among larger homes"><img src="{{ '/assets/price-by-living-area.png' | relative_url }}" alt="Median sale prices rise across ten living-area groups, with a wider price range among larger homes"></a><figcaption>The points show group medians. The band contains the middle half of sale prices in each group.</figcaption></figure>
+    <h2>Three models on the same sales</h2>
+    <p>I kept the original assignment’s 85/15 split, estimated missing values and scaling parameters from the training rows, then evaluated each model on the same 3,242 sales. Living area alone gave a test R² of 0.491. With 11 property features, linear Ridge reached 0.648. Adding squared terms and interactions raised it to 0.712, with a mean absolute error of $118,490.</p>
+    <figure><a href="{{ '/assets/held-out-models.png' | relative_url }}" aria-label="Open the full-size figure: Test R-squared of 0.491 for living area, 0.648 for linear Ridge and 0.712 for degree-two Ridge"><img src="{{ '/assets/held-out-models.png' | relative_url }}" alt="Test R-squared of 0.491 for living area, 0.648 for linear Ridge and 0.712 for degree-two Ridge"></a><figcaption>All three scores use identical test transactions. Mean absolute error fell from $174,799 for the baseline to $118,490 for the degree-two model.</figcaption></figure>
+    <p>The random split includes 38 property IDs on both sides, and the sales span only May 2014 to May 2015. A stronger next test would reserve later sales and keep their properties out of training.</p>
+  </section>
+  <section>
+    <h2>From course notebook to portfolio</h2>
+    <p>I completed IBM Skills Network’s <em>House Sales in King County, USA</em> lab for Assignment 01. My original notebook used the lab’s preprocessing and obtained 0.700 for degree-two Ridge. This portfolio script adds training-only imputation and standardization, compares three models and regenerates both figures.</p>
+    <p>The upstream Kaggle listing identifies the original data as CC0. The script downloads and checks IBM’s modified teaching CSV. The repository contains the code and aggregate output. <a href="https://github.com/LISIWEI-UM/CISC7204-mc63848-2026GitHub/blob/main/cisc7204-Assgn01-2026-mc63848/king-county/README.md">Sources, method and run instructions</a></p>
+  </section>
+</article>

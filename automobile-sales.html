@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Car sales during recessions"
+description: "Which vehicle types show the largest gaps in mean sales between recession and other observations?"
+permalink: /projects/automobile-sales/
+---
+<article class="study">
+  <header>
+    <p class="context">Assignment 02 / Completed</p>
+    <h1>Car sales during recessions</h1>
+    <p class="dek">Which vehicle types show the largest gaps in mean sales between recession and other observations?</p>
+    <a class="action" href="https://github.com/LISIWEI-UM/CISC7204-mc63848-2026GitHub/tree/main/cisc7204-Assgn02-2026-mc63848/module05/final">Open the notebook and Dash app</a>
+  </header>
+  <section>
+    <h2>The gap differs by vehicle type</h2>
+    <p>I grouped 2,112 observations in the course dataset by vehicle type and recession flag. All five categories averaged fewer sales in recession observations. Sports cars showed the largest relative gap, from 3,431 vehicles per observation outside recessions to 815 during recessions, or 76.3% lower. Executive cars followed at 74.7%.</p>
+    <figure><a href="{{ '/assets/vehicle-sales-by-period.png' | relative_url }}" aria-label="Open the full-size figure: Grouped mean vehicle sales for recession and non-recession observations across five vehicle types"><img src="{{ '/assets/vehicle-sales-by-period.png' | relative_url }}" alt="Grouped mean vehicle sales for recession and non-recession observations across five vehicle types"></a><figcaption>The notebook compares mean vehicles sold per observation. The mix of records can change across periods, so the gap alone cannot tell us how much a recession caused sales to fall.</figcaption></figure>
+    <h2>Inside the dashboard</h2>
+    <p>The Dash app offers a recession report and a report for any year from 1980 through 2023. Changing the report updates four charts. The yearly view sums sales within each month and averages sales by vehicle type. In December 2013 the monthly total was 24,360 vehicles.</p>
+    <figure><a href="{{ '/assets/dashboard-recession.png' | relative_url }}" aria-label="Open the full-size figure: Four-chart recession view from the local automobile sales dashboard"><img src="{{ '/assets/dashboard-recession.png' | relative_url }}" alt="Four-chart recession view from the local automobile sales dashboard"></a><figcaption>Screenshot of the running Python app. The recession view shows sales by year and vehicle type, advertising shares, and sales by unemployment rate.</figcaption></figure>
+    <p>To change the year or report, download the Lab02 ZIP, install its listed dependencies and run the Python script. The app opens locally on port 8059. Both report modes, all 44 year selections and the 528 monthly totals were checked against the supplied data. <a href="https://github.com/LISIWEI-UM/CISC7204-mc63848-2026GitHub/tree/main/cisc7204-Assgn02-2026-mc63848/module05/final/lab02">Run instructions and source code</a></p>
+  </section>
+  <section>
+    <h2>Coursework and data</h2>
+    <p>I completed the notebook plots and dashboard callbacks for the IBM Skills Network <em>Data Visualization with Python</em> final lab. The figures describe its teaching dataset. The lab materials retain IBM’s copyright notice. <a href="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/d51iMGfp_t0QpO30Lym-dw/automobile-sales.csv">Course CSV</a> · <a href="https://github.com/LISIWEI-UM/CISC7204-mc63848-2026GitHub/tree/main/cisc7204-Assgn02-2026-mc63848">Full Assignment 02</a></p>
+  </section>
+</article>

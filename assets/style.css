@@ -1,1 +1,96 @@
-:root{--ink:#172c33;--muted:#52676d;--paper:#f8f7f2;--accent:#167d9a;--line:#d7dfda}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.7 system-ui,-apple-system,Segoe UI,sans-serif}header,main,footer{max-width:1120px;margin:auto;padding:28px 42px}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);font-size:14px}a{color:#11657c;text-underline-offset:4px}.brand{font-weight:750;letter-spacing:.06em;text-decoration:none;color:var(--ink)}.brand span{font-size:11px;color:var(--muted);margin-left:12px}h1{font-size:clamp(42px,6vw,72px);line-height:1.1;letter-spacing:-.055em;margin:30px 0 26px;max-width:850px}h2{font-size:32px;letter-spacing:-.025em;margin-top:65px}h3{font-size:24px;margin-bottom:8px}.eyebrow{font:700 12px/1.4 system-ui;letter-spacing:.14em;color:var(--accent);margin-top:40px}.intro{font-size:22px;max-width:770px;color:var(--muted)}.skills{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 48px}.skills span{font-size:13px;border:1px solid var(--line);border-radius:25px;padding:5px 15px}.project{background:white;border:1px solid var(--line);border-radius:18px;padding:34px;margin-top:24px}.status{font-size:12px;color:#845419;background:#faf0d8;padding:6px 12px;border-radius:20px}.lead{font-size:22px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:28px 0}.metric{border-top:2px solid var(--accent);padding-top:16px}.metric strong{font-size:35px;display:block}.metric span{font-size:13px;color:var(--muted)}img{max-width:100%;height:auto;border-radius:12px;display:block}.caption{font-size:14px;color:var(--muted)}.note{border-left:3px solid #bd633d;padding:4px 0 4px 20px;color:#4c5658}.button{display:inline-block;background:var(--ink);color:white;text-decoration:none;padding:10px 20px;border-radius:7px;margin-top:14px}footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:65px;padding-bottom:45px}@media(max-width:650px){header,main,footer{padding-left:22px;padding-right:22px}.brand span{display:none}.project{padding:20px}.metrics{grid-template-columns:1fr}h2{font-size:27px}.intro{font-size:19px}}
+* { box-sizing: border-box; }
+:root {
+  --ink: #192c37;
+  --slate: #465e6b;
+  --teal: #075f62;
+  --light: #eff4f5;
+  --stroke: #c8d6da;
+  --page: 1160px;
+}
+html { scroll-padding-top: 1rem; }
+body { margin: 0; color: var(--ink); background: #fbfcfc; font: 17px/1.62 "Segoe UI", system-ui, sans-serif; }
+a { color: var(--teal); text-underline-offset: .2em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid #b75528; outline-offset: 4px; }
+h1, h2, h3, p, figure { margin: 0; }
+h1, h2, h3 { line-height: 1.09; text-wrap: balance; }
+h1, h2 { font-family: Georgia, Cambria, serif; font-weight: 500; }
+h1 { font-size: clamp(3.2rem, 7.2vw, 6.1rem); letter-spacing: -.065em; }
+h2 { font-size: clamp(1.9rem, 4.2vw, 3.25rem); letter-spacing: -.045em; }
+h3 { font-size: 1.35rem; letter-spacing: -.03em; }
+p + p { margin-top: .9em; }
+.masthead, main, footer { width: min(calc(100% - 80px), var(--page)); margin-inline: auto; }
+.masthead, footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.masthead { padding: 22px 0; border-bottom: 1px solid var(--stroke); }
+.masthead nav { display: flex; gap: clamp(18px, 4vw, 42px); }
+.masthead nav a { font-size: .93rem; text-decoration: none; }
+.masthead nav a:hover { text-decoration: underline; }
+.wordmark { color: var(--ink); font: bold 1.55rem/1.2 Georgia, serif; letter-spacing: -.04em; text-decoration: none; }
+.opening { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(30px, 7vw, 95px); padding-block: clamp(42px, 6vw, 82px); }
+.kicker, .context { font-size: .84rem; font-weight: 650; color: var(--teal); }
+.bio h1 { margin: 16px 0 22px; }
+.intro, .dek { font-size: clamp(1.07rem, 1.65vw, 1.32rem); color: var(--slate); line-height: 1.58; max-width: 56ch; }
+.action { display: inline-block; margin-top: 26px; padding: 10px 19px; border-radius: 5px; background: var(--teal); color: white; font-size: .93rem; font-weight: 650; text-decoration: none; }
+.action:hover { background: #084a50; }
+.scoreboard { padding: clamp(22px, 3.2vw, 40px); background: #173d48; color: white; border-radius: 3px 30px 3px 3px; }
+.scoreboard .kicker, .scoreboard a { color: #c4e6dc; }
+.scoreboard h2 { font-size: clamp(2rem, 3.4vw, 2.95rem); margin: 8px 0 22px; }
+.scoreboard table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.scoreboard thead th { font-size: .8rem; color: #d8e6eb; }
+.scoreboard th { text-align: left; font-weight: 600; }
+.scoreboard td, .scoreboard th { padding: 8px 0; }
+.scoreboard td, .scoreboard thead th { text-align: right; }
+.scoreboard tbody tr { border-top: 1px solid #56737b; }
+.scoreboard tbody td { font-size: clamp(1.4rem, 2.7vw, 2.1rem); }
+.scoreboard tbody .winner { color: #e2ef90; font-weight: 700; }
+.scoreboard p { margin: 15px 0 12px; font-size: .81rem; color: #d8e6eb; }
+.scoreboard a { font-weight: 600; font-size: .92rem; }
+.work { padding: 26px 0 50px; }
+.work-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(22px, 3.5vw, 48px); margin-top: 24px; }
+.work-list article { border-top: 3px solid var(--teal); padding-top: 15px; display: flex; flex-direction: column; }
+.work-list article:nth-child(2) { border-color: #5980a5; }
+.work-list article:nth-child(3) { border-color: #b57349; }
+.work-list h3 { margin: 10px 0 12px; font: 500 clamp(1.5rem, 2.35vw, 2.1rem)/1.1 Georgia, serif; letter-spacing: -.045em; }
+.work-list h3 a { color: var(--ink); text-decoration: none; }
+.work-list h3 a:hover { text-decoration: underline; }
+.work-list article > p:not(.context) { color: var(--slate); }
+.text-link { margin-top: auto; padding-top: 14px; font-size: .94rem; font-weight: 650; }
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 8%; padding: 32px 0; border-top: 1px solid var(--stroke); }
+.about h2, .about h3 { font: 500 1.75rem/1.15 Georgia, serif; margin: 0 0 12px; }
+.about p, details { font-size: .97rem; }
+details { margin-top: 18px; }
+summary { cursor: pointer; font-weight: 650; color: var(--teal); }
+details[open] p { margin-top: .6em; }
+footer { margin-top: 36px; border-top: 1px solid var(--stroke); padding: 24px 0 34px; font-size: .85rem; color: var(--slate); }
+footer a { color: inherit; }
+.skip, .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip:focus { position: fixed; z-index: 5; inset: 10px auto auto 10px; width: auto; height: auto; background: white; padding: 8px 12px; clip-path: none; }
+.study { width: min(100%, 930px); margin-inline: auto; }
+.study header { padding: clamp(38px, 5vw, 64px) 0 30px; border-bottom: 1px solid var(--stroke); }
+.study h1 { margin: 12px 0 20px; max-width: 18ch; font-size: clamp(2.6rem, 6vw, 4.8rem); }
+.study h2 { font-size: clamp(1.65rem, 3vw, 2.45rem); margin: 42px 0 12px; }
+.study header .action { margin-top: 20px; }
+.study section > p { max-width: 75ch; }
+.study figure { margin: 24px 0; border: 1px solid var(--stroke); border-radius: 6px; background: white; overflow: hidden; }
+.study figure img { display: block; max-width: 100%; height: auto; margin: auto; }
+.study figcaption { padding: 12px 18px; background: var(--light); font-size: .94rem; color: var(--slate); }
+.study .links { margin-top: 16px; }
+@media (max-width: 780px) {
+  .masthead, main, footer { width: min(calc(100% - 36px), var(--page)); }
+  .opening { grid-template-columns: 1fr; gap: 28px; }
+  .bio h1 br { display: none; }
+  .bio { max-width: 580px; }
+  .work-list, .about { grid-template-columns: 1fr; gap: 28px; }
+  .work-list article > p { max-width: 62ch; }
+}
+@media (max-width: 460px) {
+  .masthead { padding-block: 16px; }
+  .masthead nav { gap: 16px; }
+  .scoreboard { padding: 20px; }
+  footer { flex-direction: column; align-items: flex-start; gap: 5px; }
+}
+@media print {
+  .masthead nav, .action, .skip, footer { display: none; }
+  main, .masthead { width: 100%; }
+  figure { break-inside: avoid; }
+}
