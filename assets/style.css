@@ -46,7 +46,7 @@ p + p { margin-top: .9em; }
 .scoreboard p { margin: 15px 0 12px; font-size: .81rem; color: #d8e6eb; }
 .scoreboard a { font-weight: 600; font-size: .92rem; }
 .work { padding: 26px 0 50px; }
-.work-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(22px, 3.5vw, 48px); margin-top: 24px; }
+.work-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(22px, 3.5vw, 48px); margin-top: 24px; }
 .work-list article { border-top: 3px solid var(--teal); padding-top: 15px; display: flex; flex-direction: column; }
 .work-list article:nth-child(2) { border-color: #5980a5; }
 .work-list article:nth-child(3) { border-color: #b57349; }

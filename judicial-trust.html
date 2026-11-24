@@ -1,0 +1,31 @@
+---
+layout: default
+title: "Judicial trust in China"
+description: "A two-wave CGSS pair project on courts, judges and the choices that make a survey comparison possible."
+permalink: /projects/judicial-trust/
+---
+<article class="study">
+  <header>
+    <p class="context">Assignments 01 &amp; 02 / Pair research</p>
+    <h1>Judicial trust in China</h1>
+    <p class="dek">In 2017 the survey asked people about courts. In 2023 it asked about judges. How much of the difference between their answers can we interpret as a change in trust?</p>
+    <a class="action" href="https://github.com/LISIWEI-UM/CISC7204-mc63848-2026GitHub/tree/main/cisc7204-Assgn01-2026-mc63848/judicial-trust">Open my Python workflow</a>
+  </header>
+  <section id="assignment-01">
+    <h2>Assignment 01. Making two questions comparable</h2>
+    <p>Our preliminary proposal, <em>From Courts to Judges, from Eleven Points to Four</em>, asked how judicial trust differed between the two waves of the Chinese General Social Survey (CGSS), which characteristics were associated with trust, and which groups showed the largest differences.</p>
+    <figure><a href="{{ '/assets/trust-coding.png' | relative_url }}"><img src="{{ '/assets/trust-coding.png' | relative_url }}" alt="The 2017 court item counts responses 6 through 10 as trust. The 2023 judge item counts responses 1 and 2 as trust. Skipped items remain missing."></a><figcaption>The cutoffs put the two answers on a common binary scale. The distinction between trusting an institution and trusting a person still matters.</figcaption></figure>
+    <p>One cleaning decision changed the comparison. The 2023 telephone questionnaire omits the judge item. Coding those skips as zero would count a person who never saw the question as expressing distrust. My Python workflow preserves the missing value and calculates the rate among respondents who answered.</p>
+  </section>
+  <section id="assignment-02">
+    <h2>Assignment 02. Extending the research question</h2>
+    <p>Our revised proposal, <em>From Measurement Harmonization to Multi-Layer Explanation</em>, examined how digital media use, governance investment and people’s experience of procedures might relate to judicial trust. I prepared visualizations of household economic standing, birth cohorts, regional differences and adjusted predictions by internet use.</p>
+    <p>The cohort chart compares people born in the same period across two separate samples. The internet-use chart uses model-adjusted probabilities. These analyses answer different questions, and neither follows the same respondents over time.</p>
+  </section>
+  <section>
+    <h2>My contribution and project status</h2>
+    <p>As the pair’s Python developer and visualization analyst, I cleaned the raw 2023 data, converted the previously cleaned 2017 Stata file, pooled the waves and checked the Python outputs against Stata. I organized the workflow in an executed Jupyter notebook, produced the figures and tracked handoffs with my teammate.</p>
+    <p>Both proposal stages and the Python workflow are complete. A remaining research question is how sensitive the comparison is to the cutoff used in 2017 and to the wording change between waves.</p>
+    <p>The public repository presents the methods, executable code and a diagram of the coding rules. Registered users can obtain the survey data from the provider. We acknowledge the National Survey Research Center at Renmin University of China and the CGSS team. We take responsibility for the analysis. <a href="https://www.cnsda.org/index.php?r=projects/view&amp;id=94525591">2017 wave</a> · <a href="https://www.cnsda.org/index.php?r=projects/view&amp;id=11256439">2023 wave</a> · <a href="https://www.cnsda.org/doc/CNSDA_DataUseAgreement.html">Data use agreement</a></p>
+  </section>
+</article>
